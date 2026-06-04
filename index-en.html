@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Step Up! Produções — Music event hub for the corporate world | Web Summit Rio 2026</title>
+<meta name="description" content="Step Up! orchestrates every player of a major music event under one point of command — now for the corporate world. Turn it up. Own the stage." />
+<link rel="icon" href="https://i.imgur.com/BJPgG90.png" />
+
+<!--
+  STEP UP! PRODUÇÕES — WEB SUMMIT RIO 2026 LANDING (English version)
+  Real content from https://stepupproducoes.com.br/  (logo, services, contact, CNPJ)
+  Visual system 100% derived from the Step Up! brand tokens.
+  IMAGES: save the 3 files IN THE SAME FOLDER as this HTML, with these exact names:
+    foto-hero.jpg      -> band + crowd (HERO background)
+    foto-bastidor.jpg  -> photographer/backstage (The complexity section)
+    textura-marca.jpg  -> dark waveform texture (final block background)
+  If any is missing, a designed state shows (gradient + icon), never blank/broken.
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<style>
+/* 1. FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Anton&family=Archivo+Black&family=Space+Grotesk:wght@300;400;500;600;700&family=Roboto+Flex:opsz,wdth,wght@8..144,25..151,100..1000&family=PT+Sans:wght@400;700&family=JetBrains+Mono:wght@400;700&display=swap');
+
+/* 2. TOKENS (Step Up! identity) */
+:root{
+  --su-black:#000000; --su-ink:#0A0A0A; --su-coal:#121212; --su-graphite:#1A1A1A;
+  --su-iron:#262626; --su-stone:#404040; --su-ash:#737373; --su-bone:#A3A3A3;
+  --su-chalk:#D4D4D4; --su-off-white:#F2F2F2; --su-white:#FFFFFF;
+  --su-violet:#8A2BE2; --su-violet-hot:#A855F7; --su-violet-deep:#5B21B6;
+  --su-magenta:#B23440; --su-blue:#4169E1; --su-blue-deep:#2E338B; --su-electric:#6D5CFF;
+  --su-gradient: linear-gradient(95deg,#B23440 0%,#8A2BE2 38%,#6D5CFF 68%,#4169E1 100%);
+  --bg:#000000; --surface:#121212; --surface-hover:#262626; --bg-overlay:rgba(0,0,0,0.85);
+  --fg:#F2F2F2; --fg-muted:#A3A3A3; --fg-subtle:#737373; --fg-on-accent:#FFFFFF;
+  --accent:#8A2BE2; --accent-hover:#A855F7; --accent-pressed:#5B21B6; --danger:#B23440; --highlight:#4169E1;
+  --line:rgba(255,255,255,0.10); --line-strong:rgba(255,255,255,0.18); --line-accent:rgba(138,43,226,0.30);
+  --glow-violet:0 0 24px rgba(138,43,226,0.50); --glow-blue:0 0 24px rgba(65,105,225,0.45);
+  --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px; --space-5:24px;
+  --space-6:32px; --space-7:48px; --space-8:64px; --space-9:96px; --space-10:128px;
+  --r-0:0; --r-2:4px; --r-3:8px; --r-4:12px; --r-pill:9999px;
+  --elev-1:0 1px 2px rgba(0,0,0,0.4); --elev-2:0 4px 12px rgba(0,0,0,0.5); --elev-3:0 10px 32px rgba(0,0,0,0.6);
+  --elev-glow:0 0 0 1px rgba(138,43,226,0.5),0 8px 24px rgba(138,43,226,0.25);
+  --ease-main:cubic-bezier(0.22,1,0.36,1); --dur-fast:120ms; --dur-base:220ms; --dur-slow:520ms;
+  --font-display:'Anton','Bebas Neue','Archivo Black',Impact,sans-serif;
+  --font-ui:'Space Grotesk','Inter',system-ui,sans-serif;
+  --font-body:'PT Sans','Inter',system-ui,sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+  --font-variable:'Roboto Flex','Inter',sans-serif;
+}
+
+/* 3. RESET */
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+
+/* 4. TYPE */
+.display{font-family:var(--font-display);font-weight:400;font-size:clamp(56px,11vw,164px);line-height:0.92;text-transform:uppercase;letter-spacing:0.5px}
+h1,.h1{font-family:var(--font-display);font-weight:400;font-size:clamp(36px,4.5vw,56px);line-height:1.0;text-transform:uppercase;letter-spacing:0.5px}
+h2,.h2{font-family:var(--font-display);font-weight:400;font-size:clamp(28px,3.2vw,40px);line-height:1.05;text-transform:uppercase;letter-spacing:0.5px}
+h3,.h3{font-family:var(--font-ui);font-weight:600;font-size:22px;line-height:1.2}
+h4,.h4{font-family:var(--font-ui);font-weight:600;font-size:18px;line-height:1.25}
+p{font-family:var(--font-body);font-size:16px;line-height:1.55;color:var(--fg-muted)}
+.lead{font-size:clamp(17px,1.4vw,20px);line-height:1.5;color:var(--fg)}
+.eyebrow{font-family:var(--font-ui);font-size:12px;letter-spacing:0.24em;text-transform:uppercase;font-weight:700;color:var(--fg-muted)}
+.grad-text{background:var(--su-gradient);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+
+/* 5. LAYOUT */
+.container{width:min(1240px,92vw);margin-inline:auto}
+section{padding-block:76px}
+.section-head{max-width:780px;margin-bottom:var(--space-8)}
+.section-head .eyebrow{display:inline-flex;align-items:center;gap:var(--space-2);margin-bottom:var(--space-4)}
+.section-head h2{margin-bottom:var(--space-4)}
+.accent-rule{width:64px;height:3px;background:var(--su-gradient);border-radius:var(--r-pill)}
+
+/* 6. BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:var(--space-2);font-family:var(--font-ui);font-weight:600;font-size:15px;padding:14px 22px;border-radius:var(--r-3);border:1px solid transparent;cursor:pointer;transition:background var(--dur-base) var(--ease-main),box-shadow var(--dur-base) var(--ease-main),border-color var(--dur-base) var(--ease-main)}
+.btn-primary{background:var(--accent);color:var(--fg-on-accent);box-shadow:var(--elev-1)}
+.btn-primary:hover{background:var(--accent-hover);box-shadow:var(--glow-violet)}
+.btn-primary:active{background:var(--accent-pressed)}
+.btn-ghost{background:transparent;color:var(--fg);border:1px solid var(--line-strong)}
+.btn-ghost:hover{border-color:var(--line-accent);box-shadow:var(--elev-1)}
+.btn-lg{padding:18px 30px;font-size:16px}
+.btn i{width:18px;height:18px}
+
+/* 7. CARD / CALLOUT / STAT / LIST */
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-3);box-shadow:var(--elev-1);padding:var(--space-6);transition:border-color var(--dur-base) var(--ease-main),box-shadow var(--dur-base) var(--ease-main)}
+.card:hover{border-color:var(--line-accent);box-shadow:var(--elev-2)}
+.card .ico{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:var(--r-3);background:var(--su-graphite);border:1px solid var(--line);margin-bottom:var(--space-5);color:var(--fg)}
+.card .ico i{width:24px;height:24px}
+.card h3{margin-bottom:var(--space-3)}
+.card p{font-size:15px}
+.callout{background:var(--surface);border:1px solid var(--line);border-left:3px solid transparent;border-image:var(--su-gradient) 1;border-radius:var(--r-3);padding:var(--space-6) var(--space-7)}
+.callout-plain{border-left:3px solid var(--accent);border-radius:var(--r-3);background:var(--su-coal);border-image:none}
+.stat .num{font-family:var(--font-display);font-size:clamp(40px,4.6vw,64px);line-height:0.95}
+.stat .label{font-family:var(--font-ui);font-size:13px;letter-spacing:0.06em;color:var(--fg-muted);margin-top:var(--space-2)}
+.ul-clean{list-style:none;display:flex;flex-direction:column;gap:var(--space-3)}
+.ul-clean li{display:flex;gap:var(--space-3);align-items:flex-start;color:var(--fg-muted);font-size:15px}
+.ul-clean li i{width:18px;height:18px;color:var(--accent);flex:0 0 auto;margin-top:3px}
+
+/* image with designed fallback */
+.photo{position:relative;overflow:hidden;border-radius:var(--r-3);border:1px solid var(--line);background:linear-gradient(135deg,#171717 0%,#0c0c0c 100%)}
+.photo .ph-fallback{position:absolute;inset:0;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--space-3);text-align:center;padding:var(--space-6);background:radial-gradient(120% 100% at 28% 0%,rgba(138,43,226,0.16),transparent 60%)}
+.photo .ph-fallback i{width:34px;height:34px;color:var(--accent)}
+.photo .ph-fallback span{font-family:var(--font-mono);font-size:11px;letter-spacing:0.04em;color:var(--fg-subtle);max-width:84%}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}
+
+.grid{display:grid;gap:var(--space-5)}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+
+/* 8. TOPBAR */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(0,0,0,0.6);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.topbar .inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand img{height:34px;width:auto}
+.topbar nav{display:flex;align-items:center;gap:var(--space-6)}
+.topbar nav a{font-family:var(--font-ui);font-size:14px;color:var(--fg-muted);transition:color var(--dur-fast) var(--ease-main)}
+.topbar nav a:hover{color:var(--fg)}
+.topbar .btn{padding:10px 18px}
+.lang{display:inline-flex;border:1px solid var(--line-strong);border-radius:var(--r-pill);overflow:hidden;font-family:var(--font-ui);font-size:12px;font-weight:600}
+.lang a{padding:7px 12px;color:var(--fg-muted);letter-spacing:.04em}
+.lang a.active{background:var(--accent);color:var(--fg-on-accent)}
+.lang a:not(.active):hover{color:var(--fg)}
+
+/* 9. HERO */
+#hero{position:relative;min-height:94vh;display:flex;align-items:center;padding-block:var(--space-9);overflow:hidden}
+#hero .hero-bg{position:absolute;inset:0;z-index:0;background:#000 url('foto-hero.jpg') center/cover no-repeat}
+#hero .hero-bg::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 72% 8%,rgba(138,43,226,0.22),transparent 55%),linear-gradient(180deg,rgba(0,0,0,0.55) 0%,rgba(0,0,0,0.80) 58%,#000 100%)}
+#hero .container{position:relative;z-index:1}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:var(--space-2);border:1px solid var(--line-strong);border-radius:var(--r-pill);padding:8px 16px;margin-bottom:var(--space-6);background:rgba(0,0,0,0.35)}
+.hero-eyebrow i{width:14px;height:14px;color:var(--highlight)}
+.hero-title{margin-bottom:var(--space-5);max-width:16ch}
+.hero-title .breathe{font-family:var(--font-variable);display:inline-block;font-weight:1000;animation:breathe 11s var(--ease-main) infinite}
+@keyframes breathe{0%,100%{font-variation-settings:'wght' 760,'wdth' 60}50%{font-variation-settings:'wght' 1000,'wdth' 100}}
+.hero-tag{font-family:var(--font-display);font-size:clamp(26px,3.2vw,44px);line-height:1;text-transform:uppercase;margin-bottom:var(--space-6)}
+.hero-sub{max-width:58ch;margin-bottom:var(--space-7)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:var(--space-4);align-items:center}
+.hero-meta{display:flex;flex-wrap:wrap;gap:var(--space-6);margin-top:var(--space-8);padding-top:var(--space-6);border-top:1px solid var(--line)}
+.hero-meta .item{display:flex;align-items:center;gap:var(--space-2);font-family:var(--font-ui);font-size:13px;color:var(--fg-muted)}
+.hero-meta .item i{width:16px;height:16px;color:var(--fg-subtle)}
+
+/* 10. SECTIONS */
+.opp-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:var(--space-8);align-items:center}
+.cx-grid{display:grid;grid-template-columns:1fr 0.9fr;gap:var(--space-8);align-items:stretch}
+.cx-photo{min-height:420px}
+.chips{display:flex;flex-wrap:wrap;gap:var(--space-3);margin-top:var(--space-6)}
+.chip{font-family:var(--font-ui);font-size:13px;color:var(--fg-muted);background:var(--su-coal);border:1px solid var(--line);border-radius:var(--r-pill);padding:8px 14px;display:inline-flex;align-items:center;gap:8px}
+.chip i{width:14px;height:14px;color:var(--fg-subtle)}
+
+#hub{background:radial-gradient(80% 60% at 50% 0%,rgba(65,105,225,0.07),transparent 60%)}
+.hub-stage{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-5);margin-top:var(--space-7)}
+.hub-core{grid-column:1 / -1;display:flex;flex-direction:column;align-items:center;text-align:center;background:var(--su-coal);border:1px solid var(--line-accent);border-radius:var(--r-3);padding:var(--space-7);box-shadow:var(--elev-glow);margin-bottom:var(--space-3)}
+.hub-core .badge{font-family:var(--font-display);font-size:clamp(28px,3vw,40px);text-transform:uppercase}
+.hub-core p{max-width:60ch;margin-top:var(--space-3)}
+.player{display:flex;gap:var(--space-4);align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-3);padding:var(--space-5);transition:border-color var(--dur-base) var(--ease-main),box-shadow var(--dur-base) var(--ease-main)}
+.player:hover{border-color:var(--line-accent);box-shadow:var(--elev-2)}
+.player i{width:22px;height:22px;color:var(--accent);flex:0 0 auto;margin-top:2px}
+.player h4{margin-bottom:4px}
+.player p{font-size:14px}
+
+.deliver-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-5)}
+.deliver .tag{font-family:var(--font-mono);font-size:11px;color:var(--accent);letter-spacing:0.06em;margin-bottom:var(--space-3);display:block;text-transform:uppercase}
+
+.backbone{display:grid;grid-template-columns:repeat(5,1fr);gap:var(--space-4);margin-top:var(--space-7)}
+.bb{background:var(--su-coal);border:1px solid var(--line);border-radius:var(--r-3);padding:var(--space-5)}
+.bb i{width:20px;height:20px;color:var(--highlight);margin-bottom:var(--space-3);display:block}
+.bb h4{font-size:15px;margin-bottom:6px}
+.bb p{font-size:13px}
+
+#casting{background:radial-gradient(80% 60% at 50% 100%,rgba(138,43,226,0.06),transparent 60%)}
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-5);margin-bottom:var(--space-8)}
+
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:var(--space-4);margin-top:var(--space-7);position:relative}
+.flow::before{content:"";position:absolute;top:24px;left:6%;right:6%;height:1px;background:var(--line)}
+.step{position:relative;text-align:left}
+.step .node{width:48px;height:48px;border-radius:var(--r-pill);background:var(--su-coal);border:1px solid var(--line-accent);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:20px;color:var(--fg);margin-bottom:var(--space-4);position:relative;z-index:1}
+.step h4{margin-bottom:var(--space-2);font-size:16px}
+.step p{font-size:14px}
+
+#cta{position:relative;overflow:hidden}
+#cta .wrap{position:relative;background:var(--su-coal) url('textura-marca.jpg') center/cover no-repeat;border:1px solid var(--line-accent);border-radius:var(--r-4);padding:clamp(36px,6vw,84px);text-align:center;box-shadow:var(--elev-glow)}
+#cta .wrap::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,0.78),rgba(10,10,10,0.90));border-radius:var(--r-4)}
+#cta .wrap>*{position:relative;z-index:1}
+#cta h2{margin-bottom:var(--space-4)}
+#cta p{max-width:54ch;margin-inline:auto;margin-bottom:var(--space-7)}
+#cta .cta-row{display:flex;flex-wrap:wrap;gap:var(--space-4);justify-content:center;align-items:center}
+
+footer{border-top:1px solid var(--line);padding-block:var(--space-8)}
+.foot-grid{display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--space-7);align-items:flex-start}
+.foot-brand img{height:34px;margin-bottom:var(--space-3)}
+.foot-note{color:var(--fg-subtle);font-size:13px}
+.foot-contact{display:flex;flex-direction:column;gap:var(--space-3)}
+.foot-contact a{display:inline-flex;align-items:center;gap:var(--space-3);color:var(--fg-muted);font-family:var(--font-ui);font-size:15px;transition:color var(--dur-fast) var(--ease-main)}
+.foot-contact a:hover{color:var(--fg)}
+.foot-contact a i{width:18px;height:18px;color:var(--accent)}
+
+.reveal{opacity:0;transform:translateY(40px) scale(0.99);transition:opacity var(--dur-slow) var(--ease-main),transform var(--dur-slow) var(--ease-main)}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:980px){
+  section{padding-block:48px}
+  .topbar nav > a:not(.btn){display:none}
+  .grid-3,.deliver-grid,.opp-grid,.cx-grid,.hub-stage,.backbone{grid-template-columns:1fr}
+  .stats-row{grid-template-columns:1fr}
+  .backbone{grid-template-columns:repeat(2,1fr)}
+  .flow{grid-template-columns:1fr;gap:var(--space-5)}
+  .flow::before{display:none}
+  .step{display:flex;gap:var(--space-4);align-items:flex-start}
+  .step .node{margin-bottom:0;flex:0 0 auto}
+  .cx-photo{min-height:280px}
+}
+@media(prefers-reduced-motion:reduce){
+  .reveal{transition:none;opacity:1;transform:none}
+  .hero-title .breathe{animation:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<header class="topbar">
+  <div class="container inner">
+    <div class="brand">
+      <img src="https://i.imgur.com/BJPgG90.png" alt="Step Up! Produções" />
+    </div>
+    <nav>
+      <a href="#hub">The hub</a>
+      <a href="#entregas">What we deliver</a>
+      <a href="#casting">Acts</a>
+      <a href="#como">How it works</a>
+      <span class="lang"><a href="index.html">PT</a><a href="index-en.html" class="active">EN</a></span>
+      <a class="btn btn-primary" href="https://wa.me/5511945083594?text=Hi%20Carolina%2C%20I%20saw%20Step%20Up%20at%20Web%20Summit%20Rio%20and%20I%20would%20like%20to%20talk%20about%20a%20music%20event." target="_blank" rel="noopener"><i data-lucide="message-circle"></i>Talk now</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="container">
+    <span class="hero-eyebrow eyebrow"><i data-lucide="map-pin"></i>Web Summit Rio 2026 · Riocentro · Jun 8–11</span>
+    <h1 class="display hero-title">The hub that puts <span class="breathe grad-text">music</span> at the center of your brand</h1>
+    <div class="hero-tag">Turn it up. <span class="grad-text">Own the stage.</span></div>
+    <p class="lead hero-sub">Step Up! brings every player of a major music event — acts, stage, sound, lights, production and logistics — under one point of command. Now, for the corporate world.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary btn-lg" href="https://wa.me/5511945083594?text=Hi%20Carolina%2C%20I%20saw%20Step%20Up%20at%20Web%20Summit%20Rio%20and%20I%20would%20like%20to%20talk%20about%20a%20music%20event." target="_blank" rel="noopener"><i data-lucide="message-circle"></i>Talk to Step Up!</a>
+      <a class="btn btn-ghost btn-lg" href="#hub"><i data-lucide="arrow-down"></i>How the hub works</a>
+    </div>
+    <div class="hero-meta">
+      <span class="item"><i data-lucide="music"></i>Corporate shows &amp; internal festivals</span>
+      <span class="item"><i data-lucide="handshake"></i>One contract, one point of contact</span>
+      <span class="item"><i data-lucide="list-music"></i>Bands &amp; DJs ready for the stage</span>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE ARE -->
+<section id="quem">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="accent-rule"></span>Who is Step Up!</span>
+      <h2>End-to-end music production, no loose ends</h2>
+      <p class="lead">A cultural production company specialized in management, booking and staging shows by original and tribute bands. We are already the bridge between artists and clients in venues, pubs and festivals — and now we bring that event engineering inside brands.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card reveal"><span class="ico"><i data-lucide="target"></i></span><h3>Who it's for</h3><p>Companies and brands that want to use music as an experience: activations, internal festivals, launches and large-scale celebrations.</p></div>
+      <div class="card reveal"><span class="ico"><i data-lucide="layers"></i></span><h3>What we do</h3><p>Act curation, technical production, stage operations and full event management — from briefing to the last chord.</p></div>
+      <div class="card reveal"><span class="ico"><i data-lucide="zap"></i></span><h3>What sets us apart</h3><p>A single hub. You don't coordinate ten vendors: you talk to Step Up!, and Step Up! orchestrates the whole scene.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- OPPORTUNITY -->
+<section id="oportunidade">
+  <div class="container">
+    <div class="opp-grid">
+      <div class="reveal">
+        <span class="eyebrow"><span class="accent-rule"></span>The opportunity</span>
+        <h2 style="margin-top:var(--space-4)">Brands are built on stage, too</h2>
+        <p class="lead" style="margin-top:var(--space-4)">Media interrupts. Music gathers. A well-produced show turns a passive audience into a crowd that sings the brand's name — and takes it home.</p>
+        <ul class="ul-clean" style="margin-top:var(--space-6)">
+          <li><i data-lucide="check"></i><span>Memorable experience: the brand becomes an emotional memory, not a forgotten ad.</span></li>
+          <li><i data-lucide="check"></i><span>Organic content: the audience records and spreads your event on their own.</span></li>
+          <li><i data-lucide="check"></i><span>Team engagement: an internal festival that becomes a point of pride.</span></li>
+        </ul>
+      </div>
+      <div class="callout reveal">
+        <span class="eyebrow" style="margin-bottom:var(--space-4);display:block">Why now</span>
+        <p class="lead" style="color:var(--fg)">The corporate market has learned that experience sells more than media. What's missing is someone who delivers music at the level of a major show — with operational predictability.</p>
+        <p style="margin-top:var(--space-5)">That's exactly the gap Step Up! fills: the engineering of a festival, applied to your brand's event.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPLEXITY -->
+<section id="complexidade">
+  <div class="container">
+    <div class="cx-grid">
+      <div class="reveal">
+        <span class="eyebrow"><span class="accent-rule"></span>The complexity</span>
+        <h2 style="margin-top:var(--space-4)">A show is an orchestra of vendors</h2>
+        <p class="lead" style="margin-top:var(--space-4)">Behind 90 minutes on stage there are dozens of fronts that must run in the same rhythm. When a company tries to coordinate it all alone, the risk multiplies.</p>
+        <div class="chips">
+          <span class="chip"><i data-lucide="mic"></i>Acts &amp; fees</span>
+          <span class="chip"><i data-lucide="speaker"></i>Sound &amp; light</span>
+          <span class="chip"><i data-lucide="construction"></i>Stage &amp; structure</span>
+          <span class="chip"><i data-lucide="video"></i>Audiovisual</span>
+          <span class="chip"><i data-lucide="truck"></i>Logistics</span>
+          <span class="chip"><i data-lucide="shield"></i>Security</span>
+          <span class="chip"><i data-lucide="file-text"></i>Contracts &amp; permits</span>
+          <span class="chip"><i data-lucide="megaphone"></i>Brand activation</span>
+        </div>
+        <div class="callout callout-plain reveal" style="margin-top:var(--space-7)">
+          <p style="color:var(--fg)"><strong style="color:var(--fg);font-family:var(--font-ui)">Ten vendors, ten contracts, ten points of failure.</strong> One piece out of sync and the whole event feels it.</p>
+        </div>
+      </div>
+      <div class="photo cx-photo reveal">
+        <div class="ph-fallback"><i data-lucide="camera"></i><span>foto-bastidor.jpg — save the backstage photographer photo here</span></div>
+        <img src="foto-bastidor.jpg" alt="Photographer covering a live show backstage, with cables and a flight case" onerror="this.remove()" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE HUB -->
+<section id="hub">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="accent-rule"></span>The solution</span>
+      <h2>Step Up! is the single point that conducts the scene</h2>
+      <p class="lead">We attract, contract and coordinate every player of a music event. You get one point of contact, one contract and the peace of mind of knowing the operation is under command.</p>
+    </div>
+    <div class="hub-stage">
+      <div class="hub-core reveal">
+        <span class="eyebrow" style="margin-bottom:var(--space-3)">At the center</span>
+        <span class="badge grad-text">STEP UP! — PRODUCTION HUB</span>
+        <p>Curation, negotiation, technical production and event management. Every vendor below answers to a single conductor.</p>
+      </div>
+      <div class="player reveal"><i data-lucide="mic"></i><div><h4>Acts</h4><p>Curation and booking of artists, from tribute to original headliner.</p></div></div>
+      <div class="player reveal"><i data-lucide="speaker"></i><div><h4>Sound &amp; light</h4><p>Audio engineering and lighting design at major-show standard.</p></div></div>
+      <div class="player reveal"><i data-lucide="construction"></i><div><h4>Stage &amp; structure</h4><p>Build, rigging and scenography sized to the space.</p></div></div>
+      <div class="player reveal"><i data-lucide="video"></i><div><h4>Audiovisual</h4><p>Screens, capture and footage for the brand to use after the event.</p></div></div>
+      <div class="player reveal"><i data-lucide="truck"></i><div><h4>Logistics</h4><p>Transport, lodging, technical rider and load schedule.</p></div></div>
+      <div class="player reveal"><i data-lucide="megaphone"></i><div><h4>Brand activation</h4><p>Integrating the client's identity into the stage and the experience.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE DELIVER -->
+<section id="entregas">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="accent-rule"></span>What we deliver</span>
+      <h2>Formats to put your brand on stage</h2>
+    </div>
+    <div class="deliver-grid">
+      <div class="card deliver reveal"><span class="ico"><i data-lucide="party-popper"></i></span><span class="tag">Corporate event</span><h3>Shows at company events</h3><p>Live music produced at festival standard for conventions, parties, award ceremonies and brand celebrations.</p></div>
+      <div class="card deliver reveal"><span class="ico"><i data-lucide="tent"></i></span><span class="tag">Internal experience</span><h3>Internal festivals</h3><p>A festival of your own company: line-up, stage, operations and activation — team engagement that becomes an annual tradition.</p></div>
+      <div class="card deliver reveal"><span class="ico"><i data-lucide="list-music"></i></span><span class="tag">Curation</span><h3>Act curation</h3><p>Selecting and negotiating the right artist for the audience, the budget and the brand's goal. Booking without noise.</p></div>
+      <div class="card deliver reveal"><span class="ico"><i data-lucide="sparkles"></i></span><span class="tag">Brand + music</span><h3>Brand activations</h3><p>Music experiences that carry the client's identity from invite to closing — and generate content.</p></div>
+    </div>
+
+    <div class="section-head reveal" style="margin-top:var(--space-9);margin-bottom:var(--space-5)">
+      <span class="eyebrow"><span class="accent-rule"></span>The operational backbone</span>
+      <h2>Five fronts that sustain every event</h2>
+    </div>
+    <div class="backbone">
+      <div class="bb reveal"><i data-lucide="ticket"></i><h4>Booking &amp; sales</h4><p>Representing bands and transparent intermediation with the client.</p></div>
+      <div class="bb reveal"><i data-lucide="settings"></i><h4>Event production</h4><p>Technical planning, crew, structure and logistics with flawless execution.</p></div>
+      <div class="bb reveal"><i data-lucide="credit-card"></i><h4>Ticketed events</h4><p>Shows with ticket sales and online and on-site management.</p></div>
+      <div class="bb reveal"><i data-lucide="megaphone"></i><h4>Promotion</h4><p>Digital marketing and content for social, reels and stories.</p></div>
+      <div class="bb reveal"><i data-lucide="handshake"></i><h4>Fixed partnerships</h4><p>Curation and ongoing programming for venues, bars and pubs.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ACTS / PROVEN CAPABILITY -->
+<section id="casting">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="accent-rule"></span>Proven capability</span>
+      <h2>Acts ready, real operation</h2>
+      <p class="lead">Not a slide portfolio: we already have bands and DJs ready to take the stage, with operations running in venues, pubs and festivals. The engineering your brand hires is already in the field.</p>
+    </div>
+    <div class="stats-row reveal">
+      <div class="stat"><div class="num grad-text">Bands<br/>&amp; DJs</div><div class="label">Ready for the show</div></div>
+      <div class="stat"><div class="num grad-text">5</div><div class="label">Operational fronts</div></div>
+      <div class="stat"><div class="num grad-text">Original<br/>+ Tributes</div><div class="label">High technical-level repertoire</div></div>
+    </div>
+    <div class="grid grid-3">
+      <div class="card reveal"><span class="ico"><i data-lucide="guitar"></i></span><h3>Original bands</h3><p>Their own sound and artistic identity for brands that want something unique on stage.</p></div>
+      <div class="card reveal"><span class="ico"><i data-lucide="music"></i></span><h3>Tribute bands</h3><p>Classics the crowd knows and sings along to — guaranteed energy from the first chord.</p></div>
+      <div class="card reveal"><span class="ico"><i data-lucide="disc-3"></i></span><h3>DJs</h3><p>Custom sets to open, sustain or close the night, in your brand's vibe.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="como">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="accent-rule"></span>How it works</span>
+      <h2>From briefing to stage, under one command</h2>
+    </div>
+    <div class="flow">
+      <div class="step reveal"><div class="node">1</div><h4>Briefing</h4><p>We understand the brand's goal, audience, date and budget.</p></div>
+      <div class="step reveal"><div class="node">2</div><h4>Curation</h4><p>We propose line-up and format. You approve the scene.</p></div>
+      <div class="step reveal"><div class="node">3</div><h4>Production</h4><p>We close acts, tech, structure and logistics.</p></div>
+      <div class="step reveal"><div class="node">4</div><h4>Stage</h4><p>We run the live event end to end, on the day.</p></div>
+      <div class="step reveal"><div class="node">5</div><h4>Footage</h4><p>We deliver capture and content for the brand to use afterward.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="container">
+    <div class="wrap reveal">
+      <span class="eyebrow" style="display:block;margin-bottom:var(--space-4)">Next step</span>
+      <h2>Let's put your brand on stage</h2>
+      <p class="lead">Tell us the event you imagine. Step Up! comes back with a scene proposal — act, production and operations in one place.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary btn-lg" href="https://wa.me/5511945083594?text=Hi%20Carolina%2C%20I%20saw%20Step%20Up%20at%20Web%20Summit%20Rio%20and%20I%20would%20like%20to%20talk%20about%20a%20music%20event." target="_blank" rel="noopener"><i data-lucide="message-circle"></i>Talk to Carolina on WhatsApp</a>
+        <a class="btn btn-ghost btn-lg" href="mailto:stepupproducoes.eventos@gmail.com?subject=Music%20event%20%E2%80%94%20Step%20Up!%20Produ%C3%A7%C3%B5es"><i data-lucide="mail"></i>Send an email</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container foot-grid">
+    <div class="foot-brand">
+      <img src="https://i.imgur.com/BJPgG90.png" alt="Step Up! Produções" />
+      <p class="foot-note">Turn it up. Own the stage.<br/>Music event hub for the corporate world.<br/>Brazilian Tax ID (CNPJ) 61.327.080/0001-89</p>
+    </div>
+    <div class="foot-contact">
+      <span class="eyebrow" style="margin-bottom:var(--space-2)">Contact</span>
+      <a href="https://wa.me/5511945083594" target="_blank" rel="noopener"><i data-lucide="message-circle"></i>+55 (11) 94508-3594 · Carolina Rodrigues Oliveira</a>
+      <a href="mailto:stepupproducoes.eventos@gmail.com"><i data-lucide="mail"></i>stepupproducoes.eventos@gmail.com</a>
+      <a href="https://instagram.com/stepupproducoes" target="_blank" rel="noopener"><i data-lucide="instagram"></i>@stepupproducoes</a>
+      <a href="https://stepupproducoes.com.br/" target="_blank" rel="noopener"><i data-lucide="globe"></i>stepupproducoes.com.br</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<script>
+  if(window.lucide){lucide.createIcons();}
+  (function(){
+    var els=document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
+    },{threshold:0.15});
+    els.forEach(function(e){io.observe(e);});
+  })();
+</script>
+</body>
+</html>
